@@ -1,0 +1,9 @@
+/****************************************************************************/
+/* Localization file */
+
+
+"firmware_update" = "Update Firmware";
+"firmware_verify" = "Are you sure you want to update the firmware?";
+"cancel" = "Cancel";
+"update" = "Update";
+"updating" = "Updating";

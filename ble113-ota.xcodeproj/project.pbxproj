@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58BAE14748A8AFDA8D3BF498 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAEAFBD87DCC16CA479793 /* main.m */; };
+		58BAE4EDF2A8966466FC5876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58BAE98733B48BFB3CBD26FD /* Main.storyboard */; };
+		58BAE57DC699482CF5CA65A1 /* DeviceSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE0C673CA6FC17B0AB779 /* DeviceSettingsVC.m */; };
+		58BAE5BEE18D90D83EAB3896 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BAEBB48ED7424D10FF9EBC /* LaunchScreen.xib */; };
+		58BAE664D1E9764A23DEDEA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58BAE4541AA53207D16B1CC7 /* Localizable.strings */; };
+		58BAE8CAE2C22780FFA1D7EB /* ble113_otaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE1451BF286EE30E3BAA8 /* ble113_otaTests.m */; };
+		58BAEBC88354A315C8683CE6 /* DeviceListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAEDFDD0C6F1FF84BB9CF5 /* DeviceListTVC.m */; };
+		58BAEE843D80F31347787851 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE7BEBB2795B8EBF05522 /* AppDelegate.m */; };
+		58BAEEB5EBEF7634617601C5 /* RPJDataChunker.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAEF33AE06E002F7C32502 /* RPJDataChunker.m */; };
+		58BAEEBCD181302C33E652C6 /* SampleDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE40535775FDCF3939D21 /* SampleDevice.m */; };
+		58BAEF1DF1826736AAD55BEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58BAE451FF572EE3788E7084 /* Images.xcassets */; };
+		866C8B1878D069D34270B78E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F97F50B9A76664C7D80BD54B /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		58BAE8E6AD07B5D95C92299D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58BAE5D4449D37D3276574D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58BAE182897BB01CEEF58208;
+			remoteInfo = "ble113-ota";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		112BF0FBC8B3F2A67B20369B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		58BAE0C673CA6FC17B0AB779 /* DeviceSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSettingsVC.m; sourceTree = "<group>"; };
+		58BAE1451BF286EE30E3BAA8 /* ble113_otaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ble113_otaTests.m; sourceTree = "<group>"; };
+		58BAE1706DFDDC54472A0C60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		58BAE346DE15BE7306BA7EC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		58BAE381478A1AD8ADE43C3F /* SampleDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleDevice.h; sourceTree = "<group>"; };
+		58BAE40535775FDCF3939D21 /* SampleDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleDevice.m; sourceTree = "<group>"; };
+		58BAE451FF572EE3788E7084 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		58BAE4541AA53207D16B1CC7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		58BAE73A03EE74A8421D1212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		58BAE7BEBB2795B8EBF05522 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		58BAE86E3BC2843732BDC2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		58BAE9209EFABB4344129DB6 /* ble113-otaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ble113-otaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58BAE9687C71F4B695D9527C /* RPJDataChunker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPJDataChunker.h; sourceTree = "<group>"; };
+		58BAE9ACF0D358118A6E4A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		58BAE9F5E57264FB93A6F2B2 /* DeviceListTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceListTVC.h; sourceTree = "<group>"; };
+		58BAEAFBD87DCC16CA479793 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58BAEC0C47E73DF41E58A51E /* DeviceSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSettingsVC.h; sourceTree = "<group>"; };
+		58BAEDFDD0C6F1FF84BB9CF5 /* DeviceListTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceListTVC.m; sourceTree = "<group>"; };
+		58BAEEE20571412FC1E01ADC /* ble113-ota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ble113-ota.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58BAEF33AE06E002F7C32502 /* RPJDataChunker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPJDataChunker.m; sourceTree = "<group>"; };
+		CEEE99DCBEB2993BFEF85240 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F97F50B9A76664C7D80BD54B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58BAE0111D28D0F9B955AF74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58BAE880BC6E217A827F7316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				866C8B1878D069D34270B78E /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58BAE23C194EADB1B0AFE832 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		58BAE35CC711EC79FF965EB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58BAE9ACF0D358118A6E4A22 /* Info.plist */,
+				58BAEAFBD87DCC16CA479793 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58BAE69D9B6D6FF72B4A1AE7 /* ble113-otaTests */ = {
+			isa = PBXGroup;
+			children = (
+				58BAE9A96588BE50E96CFE60 /* Supporting Files */,
+				58BAE1451BF286EE30E3BAA8 /* ble113_otaTests.m */,
+			);
+			path = "ble113-otaTests";
+			sourceTree = "<group>";
+		};
+		58BAE6FE7A7C1CCD555ACE19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58BAEEE20571412FC1E01ADC /* ble113-ota.app */,
+				58BAE9209EFABB4344129DB6 /* ble113-otaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58BAE9A96588BE50E96CFE60 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58BAE73A03EE74A8421D1212 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58BAEC72DBB03DAA58E48BCA = {
+			isa = PBXGroup;
+			children = (
+				58BAE6FE7A7C1CCD555ACE19 /* Products */,
+				58BAEF583949B795FEA0A91B /* ble113-ota */,
+				58BAE69D9B6D6FF72B4A1AE7 /* ble113-otaTests */,
+				D141421B1FAD9676E8C79657 /* Pods */,
+				9A6C004C0C190FEE39E83C21 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		58BAEE16B957433E109B8B8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58BAE381478A1AD8ADE43C3F /* SampleDevice.h */,
+				58BAE40535775FDCF3939D21 /* SampleDevice.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58BAEF583949B795FEA0A91B /* ble113-ota */ = {
+			isa = PBXGroup;
+			children = (
+				58BAE35CC711EC79FF965EB3 /* Supporting Files */,
+				58BAE451FF572EE3788E7084 /* Images.xcassets */,
+				58BAEBB48ED7424D10FF9EBC /* LaunchScreen.xib */,
+				58BAE1706DFDDC54472A0C60 /* AppDelegate.h */,
+				58BAE7BEBB2795B8EBF05522 /* AppDelegate.m */,
+				58BAE98733B48BFB3CBD26FD /* Main.storyboard */,
+				58BAE9F5E57264FB93A6F2B2 /* DeviceListTVC.h */,
+				58BAEDFDD0C6F1FF84BB9CF5 /* DeviceListTVC.m */,
+				58BAEC0C47E73DF41E58A51E /* DeviceSettingsVC.h */,
+				58BAE0C673CA6FC17B0AB779 /* DeviceSettingsVC.m */,
+				58BAEF99BDC31D369E89B219 /* Utils */,
+				58BAEE16B957433E109B8B8A /* Models */,
+				58BAE4541AA53207D16B1CC7 /* Localizable.strings */,
+				58BAE23C194EADB1B0AFE832 /* Resources */,
+			);
+			path = "ble113-ota";
+			sourceTree = "<group>";
+		};
+		58BAEF99BDC31D369E89B219 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				58BAE9687C71F4B695D9527C /* RPJDataChunker.h */,
+				58BAEF33AE06E002F7C32502 /* RPJDataChunker.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9A6C004C0C190FEE39E83C21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F97F50B9A76664C7D80BD54B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D141421B1FAD9676E8C79657 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				112BF0FBC8B3F2A67B20369B /* Pods.debug.xcconfig */,
+				CEEE99DCBEB2993BFEF85240 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58BAE182897BB01CEEF58208 /* ble113-ota */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58BAE56BED024A893F03F047 /* Build configuration list for PBXNativeTarget "ble113-ota" */;
+			buildPhases = (
+				F64210E555873694F121DB22 /* Check Pods Manifest.lock */,
+				58BAE915710FD486A00EB24F /* Sources */,
+				58BAE880BC6E217A827F7316 /* Frameworks */,
+				58BAE6976B229342D0F90B9F /* Resources */,
+				F1E7793B6CD11F54413E114A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ble113-ota";
+			productName = "ble113-ota";
+			productReference = 58BAEEE20571412FC1E01ADC /* ble113-ota.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58BAE3DAF68C8820DD380F5E /* ble113-otaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58BAE8FE794A0AB78AB93284 /* Build configuration list for PBXNativeTarget "ble113-otaTests" */;
+			buildPhases = (
+				58BAEB901FE86BC35E9A2D71 /* Sources */,
+				58BAE0111D28D0F9B955AF74 /* Frameworks */,
+				58BAECE5D3035BB03F74AD54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58BAED7618CB8AB249D01F9B /* PBXTargetDependency */,
+			);
+			name = "ble113-otaTests";
+			productName = "ble113-otaTests";
+			productReference = 58BAE9209EFABB4344129DB6 /* ble113-otaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58BAE5D4449D37D3276574D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Robot Pajamas";
+			};
+			buildConfigurationList = 58BAEDF6C1E5CE3107C3F99A /* Build configuration list for PBXProject "ble113-ota" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58BAEC72DBB03DAA58E48BCA;
+			productRefGroup = 58BAE6FE7A7C1CCD555ACE19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58BAE182897BB01CEEF58208 /* ble113-ota */,
+				58BAE3DAF68C8820DD380F5E /* ble113-otaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58BAE6976B229342D0F90B9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BAEF1DF1826736AAD55BEF /* Images.xcassets in Resources */,
+				58BAE5BEE18D90D83EAB3896 /* LaunchScreen.xib in Resources */,
+				58BAE4EDF2A8966466FC5876 /* Main.storyboard in Resources */,
+				58BAE664D1E9764A23DEDEA7 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58BAECE5D3035BB03F74AD54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F1E7793B6CD11F54413E114A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F64210E555873694F121DB22 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58BAE915710FD486A00EB24F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BAE14748A8AFDA8D3BF498 /* main.m in Sources */,
+				58BAEE843D80F31347787851 /* AppDelegate.m in Sources */,
+				58BAEBC88354A315C8683CE6 /* DeviceListTVC.m in Sources */,
+				58BAE57DC699482CF5CA65A1 /* DeviceSettingsVC.m in Sources */,
+				58BAEEB5EBEF7634617601C5 /* RPJDataChunker.m in Sources */,
+				58BAEEBCD181302C33E652C6 /* SampleDevice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58BAEB901FE86BC35E9A2D71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BAE8CAE2C22780FFA1D7EB /* ble113_otaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58BAED7618CB8AB249D01F9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58BAE182897BB01CEEF58208 /* ble113-ota */;
+			targetProxy = 58BAE8E6AD07B5D95C92299D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		58BAE98733B48BFB3CBD26FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58BAE346DE15BE7306BA7EC4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		58BAEBB48ED7424D10FF9EBC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58BAE86E3BC2843732BDC2AB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		58BAE00881CD84D7233B0DC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58BAE089E232BEEA5BCFBD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEEE99DCBEB2993BFEF85240 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ble113-ota/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Release;
+		};
+		58BAE23EDFDDA996CD8093A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58BAE60A0D759B67523568D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 112BF0FBC8B3F2A67B20369B /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ble113-ota/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Debug;
+		};
+		58BAEEA069F24B0B588C12E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ble113-ota.app/ble113-ota";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ble113-otaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		58BAEEF53EDA84381350FE3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ble113-ota.app/ble113-ota";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ble113-otaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58BAE56BED024A893F03F047 /* Build configuration list for PBXNativeTarget "ble113-ota" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BAE60A0D759B67523568D6 /* Debug */,
+				58BAE089E232BEEA5BCFBD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58BAE8FE794A0AB78AB93284 /* Build configuration list for PBXNativeTarget "ble113-otaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BAEEA069F24B0B588C12E2 /* Debug */,
+				58BAEEF53EDA84381350FE3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58BAEDF6C1E5CE3107C3F99A /* Build configuration list for PBXProject "ble113-ota" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BAE00881CD84D7233B0DC6 /* Debug */,
+				58BAE23EDFDDA996CD8093A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58BAE5D4449D37D3276574D8 /* Project object */;
+}
