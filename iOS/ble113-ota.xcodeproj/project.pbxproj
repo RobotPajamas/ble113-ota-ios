@@ -18,6 +18,8 @@
 		58BAEEB5EBEF7634617601C5 /* RPJDataChunker.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAEF33AE06E002F7C32502 /* RPJDataChunker.m */; };
 		58BAEEBCD181302C33E652C6 /* SampleDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BAE40535775FDCF3939D21 /* SampleDevice.m */; };
 		58BAEF1DF1826736AAD55BEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58BAE451FF572EE3788E7084 /* Images.xcassets */; };
+		58BAEF922099CA062E75191B /* RobotPajamas-0.1.0.ota in Resources */ = {isa = PBXBuildFile; fileRef = 58BAEFB19F93AD60BBA5904B /* RobotPajamas-0.1.0.ota */; };
+		58BAEFAA76183654A8C1A12F /* RobotPajamas-0.1.1.ota in Resources */ = {isa = PBXBuildFile; fileRef = 58BAE57DAC08798EB8B106BC /* RobotPajamas-0.1.1.ota */; };
 		866C8B1878D069D34270B78E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F97F50B9A76664C7D80BD54B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,7 @@
 		58BAE40535775FDCF3939D21 /* SampleDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleDevice.m; sourceTree = "<group>"; };
 		58BAE451FF572EE3788E7084 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		58BAE4541AA53207D16B1CC7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		58BAE57DAC08798EB8B106BC /* RobotPajamas-0.1.1.ota */ = {isa = PBXFileReference; lastKnownFileType = file.ota; name = "RobotPajamas-0.1.1.ota"; path = "Resources/RobotPajamas-0.1.1.ota"; sourceTree = "<group>"; };
 		58BAE73A03EE74A8421D1212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		58BAE7BEBB2795B8EBF05522 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		58BAE86E3BC2843732BDC2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		58BAEDFDD0C6F1FF84BB9CF5 /* DeviceListTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceListTVC.m; sourceTree = "<group>"; };
 		58BAEEE20571412FC1E01ADC /* ble113-ota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ble113-ota.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BAEF33AE06E002F7C32502 /* RPJDataChunker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPJDataChunker.m; sourceTree = "<group>"; };
+		58BAEFB19F93AD60BBA5904B /* RobotPajamas-0.1.0.ota */ = {isa = PBXFileReference; lastKnownFileType = file.ota; name = "RobotPajamas-0.1.0.ota"; path = "Resources/RobotPajamas-0.1.0.ota"; sourceTree = "<group>"; };
 		CEEE99DCBEB2993BFEF85240 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F97F50B9A76664C7D80BD54B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +83,8 @@
 		58BAE23C194EADB1B0AFE832 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				58BAEFB19F93AD60BBA5904B /* RobotPajamas-0.1.0.ota */,
+				58BAE57DAC08798EB8B106BC /* RobotPajamas-0.1.1.ota */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 				58BAE5BEE18D90D83EAB3896 /* LaunchScreen.xib in Resources */,
 				58BAE4EDF2A8966466FC5876 /* Main.storyboard in Resources */,
 				58BAE664D1E9764A23DEDEA7 /* Localizable.strings in Resources */,
+				58BAEF922099CA062E75191B /* RobotPajamas-0.1.0.ota in Resources */,
+				58BAEFAA76183654A8C1A12F /* RobotPajamas-0.1.1.ota in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
