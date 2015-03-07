@@ -51,6 +51,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [[self deviceNameLabel] setText:self.device.deviceName];
+
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
     [self.device connectWithTimeout:10 completion:^(NSError *error){
