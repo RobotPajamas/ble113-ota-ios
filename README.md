@@ -1,7 +1,7 @@
 # ble113-ota-ios
 Firmware and iOS code to have Over-The-Air updates to the BLE113 (or any Bluegiga Bluetooth device)
 
-Soon, this will be followed up with an explanatory blog article at http://www.sureshjoshi.com/
+Please refer to http://www.sureshjoshi.com/embedded/ble113-ota-over-the-air-programming/ for a quick summary.
 
 License
 -------
