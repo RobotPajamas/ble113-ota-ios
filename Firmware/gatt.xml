@@ -76,12 +76,12 @@
     </service>
     
     <service uuid="00766963-6172-6173-6f6c-7574696f6e73">
-	    <description>Device Control</description>
+        <description>Device Control</description>
         <characteristic uuid="01766963-6172-6173-6f6c-7574696f6e73" id="device_reset">
             <description>Device Reset</description>
-		    <properties write_no_response="true" />
-			<value length="1" />
-		</characteristic>
-	</service>
+            <properties write_no_response="true" />
+            <value length="1" />
+        </characteristic>
+    </service>
     
 </configuration>

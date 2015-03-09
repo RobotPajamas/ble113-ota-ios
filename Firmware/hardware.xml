@@ -2,7 +2,7 @@
 
 <hardware>
     <sleeposc enable="true" ppm="30" />
-	<script enable="true" />
+    <script enable="true" />
     <txpower power="15" bias="5" />
     <pmux regulator_pin="7" />
     <sleep enable="true" />

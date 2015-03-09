@@ -5,9 +5,9 @@
     <script in="RobotPajamas.bgs" />
     <config in="config.xml" />
     <device type="ble113-m256k" />
-	<boot fw="bootota" />
-   	<image out="RobotPajamas.hex" />    
+    <boot fw="bootota" />
+    <image out="RobotPajamas.hex" />    
     <ota out="RobotPajamas.ota" firmware="false" />
     <!-- firmware=false only updates the BGScript and GATT, =true updates the BT Stack and BGAPI, but is MUCH bigger -->
-	<!-- <ota out="RobotPajamas.ota" firmware="true" /> -->
+    <!-- <ota out="RobotPajamas.ota" firmware="true" /> -->
 </project>
