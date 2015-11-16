@@ -3,6 +3,8 @@ Firmware and iOS code to have Over-The-Air updates to the BLE113 (or any Bluegig
 
 Please refer to http://www.sureshjoshi.com/embedded/ble113-ota-over-the-air-programming/ for a quick summary.
 
+NOTE: Due to my disdain of the Objective C language, I'm only going to be maintaining the Swift version of this code - the Objective C version is only staying in there for a reference and for people who are already using it.
+
 License
 -------
 
