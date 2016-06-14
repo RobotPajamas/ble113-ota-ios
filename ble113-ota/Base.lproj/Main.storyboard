@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qQI-CL-dkn">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan For Devices-->
+        <scene sceneID="uxm-5H-NQA">
+            <objects>
+                <tableViewController id="wK2-cf-no7" customClass="DeviceListViewController" customModule="ble113_ota" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a6g-6W-LpA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" textLabel="JUi-bg-i7L" style="IBUITableViewCellStyleDefault" id="vyI-U8-Ojx">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vyI-U8-Ojx" id="EWf-41-Ff2">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JUi-bg-i7L">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Omk-6K-VMc" kind="show" identifier="goToFirmwareUpdate" id="b4M-4T-m6A"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="wK2-cf-no7" id="Oy2-lp-ezo"/>
+                            <outlet property="delegate" destination="wK2-cf-no7" id="Log-mS-9Pa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Scan For Devices" id="Ugf-SL-Che"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xFe-dW-XKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="1060"/>
+        </scene>
+        <!--Firmware Update-->
+        <scene sceneID="Lg9-E8-5Ld">
+            <objects>
+                <viewController id="Omk-6K-VMc" customClass="FirmwareUpdateViewController" customModule="ble113_ota" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ucm-9v-nd0"/>
+                        <viewControllerLayoutGuide type="bottom" id="S3I-BB-cXZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aLf-j1-4AQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firmware Version:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYG-Us-AQU">
+                                <rect key="frame" x="60" y="72" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="-----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNV-Hn-EdE">
+                                <rect key="frame" x="211" y="72" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU3-1m-dZc">
+                                <rect key="frame" x="60" y="126" width="153" height="30"/>
+                                <state key="normal" title="Update Firmware 0.1.0"/>
+                                <connections>
+                                    <action selector="updateToOldFirmare:" destination="Omk-6K-VMc" eventType="touchUpInside" id="2xA-YN-fin"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5S1-tA-crQ">
+                                <rect key="frame" x="60" y="176" width="151" height="30"/>
+                                <state key="normal" title="Update Firmware 0.1.1"/>
+                                <connections>
+                                    <action selector="updateToNewFirmware:" destination="Omk-6K-VMc" eventType="touchUpInside" id="AFK-xb-EvW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hYG-Us-AQU" firstAttribute="top" secondItem="Ucm-9v-nd0" secondAttribute="bottom" constant="8" symbolic="YES" id="0ay-yx-MWS"/>
+                            <constraint firstItem="5S1-tA-crQ" firstAttribute="top" secondItem="lU3-1m-dZc" secondAttribute="bottom" constant="20" id="ACR-xq-ZW3"/>
+                            <constraint firstItem="FNV-Hn-EdE" firstAttribute="leading" secondItem="hYG-Us-AQU" secondAttribute="trailing" constant="15" id="Dqu-va-Y0d"/>
+                            <constraint firstItem="hYG-Us-AQU" firstAttribute="leading" secondItem="lU3-1m-dZc" secondAttribute="leading" id="HZN-xg-o4s"/>
+                            <constraint firstItem="hYG-Us-AQU" firstAttribute="leading" secondItem="aLf-j1-4AQ" secondAttribute="leadingMargin" constant="40" id="Og4-eP-Rr1"/>
+                            <constraint firstItem="lU3-1m-dZc" firstAttribute="top" secondItem="hYG-Us-AQU" secondAttribute="bottom" constant="33" id="eID-kh-pBi"/>
+                            <constraint firstItem="lU3-1m-dZc" firstAttribute="leading" secondItem="5S1-tA-crQ" secondAttribute="leading" id="n24-eX-ptu"/>
+                            <constraint firstItem="hYG-Us-AQU" firstAttribute="baseline" secondItem="FNV-Hn-EdE" secondAttribute="baseline" id="oVC-yQ-Lt6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Firmware Update" id="lnP-bA-WVm"/>
+                    <connections>
+                        <outlet property="firmwareVersionLabel" destination="FNV-Hn-EdE" id="Uq7-DO-0TQ"/>
+                        <outlet property="updateButton010" destination="lU3-1m-dZc" id="dGM-vM-aBz"/>
+                        <outlet property="updateButton011" destination="5S1-tA-crQ" id="JvP-JI-4Ft"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUW-bG-iXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="1060"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eiH-SD-BI7">
+            <objects>
+                <navigationController id="qQI-CL-dkn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B6j-dX-iXl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wK2-cf-no7" kind="relationship" relationship="rootViewController" id="ZWh-g8-2jQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31V-hu-dJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-96" y="1059"/>
+        </scene>
+    </scenes>
+</document>
