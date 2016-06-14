@@ -79,13 +79,13 @@ class BaseBluetoothPeripheral {
         // Using RxSwift would be great to clean up this super messy nested block business...
         // self.readSoftwareRevision({ <-- not implemented in firmawre
         self.readManufacturerModel({
-            self.readSerialNumber({
+//            self.readSerialNumber({
                 self.readFirmwareRevision({
                     self.readHardwareRevision({
                         self.readManufacturerName(callback)
                     })
                 })
-            })
+//            })
         })
     }
     

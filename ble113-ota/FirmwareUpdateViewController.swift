@@ -15,14 +15,38 @@ class FirmwareUpdateViewController: UIViewController {
     @IBOutlet weak var updateButton011: UIButton!
     
     @IBAction func updateToOldFirmare(sender: UIButton) {
+        if let firmwarePath = NSBundle.mainBundle().pathForResource("0.1.0", ofType: ".ota", inDirectory: ".") {
+            print(firmwarePath)
+            let fileData = NSData(contentsOfFile:firmwarePath)
+            let totalNumberOfPackets = fileData!.length / 16
+            print(totalNumberOfPackets)
+            self.peripheral?.updateFirmware(fileData!) {
+                
+                print("Update to 0.1.0 Completed!")
+            }
+        }
         
     }
     
     @IBAction func updateToNewFirmware(sender: UIButton) {
+        if let firmwarePath = NSBundle.mainBundle().pathForResource("0.1.1", ofType: ".ota", inDirectory: ".") {
+            print(firmwarePath)
+            let fileData = NSData(contentsOfFile:firmwarePath)
+            let totalNumberOfPackets = fileData!.length / 16
+            print(totalNumberOfPackets)
+            self.peripheral?.updateFirmware(fileData!) {
+                print("Update to 0.1.0 Completed!")
+            }
+        }
     }
     
     // Just sticking this here, so I can set it from the scan viewcontroller
     var peripheral: BluegigaPeripheral?
+    
+    override func viewDidLoad() {
+        updateButton010.hidden = true
+        updateButton011.hidden = true
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -39,8 +63,11 @@ class FirmwareUpdateViewController: UIViewController {
             peripheral?.connect(withTimeout: 5) {
                 error in
                 if error == nil {
-                    self.updateButton010.hidden = false
-                    self.updateButton011.hidden = false
+                    self.peripheral?.readDeviceInformation() {
+                        self.firmwareVersionLabel.text = self.peripheral?.firmwareRevision
+                        self.updateButton010.hidden = false
+                        self.updateButton011.hidden = false
+                    }
                 }
             }
         }

@@ -11,7 +11,7 @@ import LGBluetooth
 
 class DeviceListViewController: UITableViewController {
 
-    private let cellIdentifier = "cellIdentifier"
+    private static let cellIdentifier = "cellIdentifier"
     
     var scannedPeripherals = [BluegigaPeripheral]()
     
@@ -66,7 +66,7 @@ class DeviceListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+        let cell = tableView.dequeueReusableCellWithIdentifier(DeviceListViewController.cellIdentifier)
         
         let peripheral = scannedPeripherals[indexPath.row]
         cell!.textLabel?.text = peripheral.name

@@ -15,6 +15,8 @@
 		19542A211D0F756900C5CC61 /* BaseBluetoothPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19542A201D0F756900C5CC61 /* BaseBluetoothPeripheral.swift */; };
 		19542A231D0F786400C5CC61 /* BluegigaPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19542A221D0F786400C5CC61 /* BluegigaPeripheral.swift */; };
 		19542A251D0F7F5900C5CC61 /* FirmwareUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19542A241D0F7F5900C5CC61 /* FirmwareUpdateViewController.swift */; };
+		19542A291D0F890000C5CC61 /* 0.1.0.ota in Resources */ = {isa = PBXBuildFile; fileRef = 19542A271D0F890000C5CC61 /* 0.1.0.ota */; };
+		19542A2A1D0F890000C5CC61 /* 0.1.1.ota in Resources */ = {isa = PBXBuildFile; fileRef = 19542A281D0F890000C5CC61 /* 0.1.1.ota */; };
 		5FAE0D8DE5AD1A7F92A08941 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADAF8E5B3749A45B99960097 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		19542A201D0F756900C5CC61 /* BaseBluetoothPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBluetoothPeripheral.swift; sourceTree = "<group>"; };
 		19542A221D0F786400C5CC61 /* BluegigaPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluegigaPeripheral.swift; sourceTree = "<group>"; };
 		19542A241D0F7F5900C5CC61 /* FirmwareUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirmwareUpdateViewController.swift; sourceTree = "<group>"; };
+		19542A271D0F890000C5CC61 /* 0.1.0.ota */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0.1.0.ota; sourceTree = "<group>"; };
+		19542A281D0F890000C5CC61 /* 0.1.1.ota */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0.1.1.ota; sourceTree = "<group>"; };
 		6BD0DFE1B550B4B946A1EB09 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		966A43DD8E575CC3148CE790 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ADAF8E5B3749A45B99960097 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +71,7 @@
 		19542A0B1D0F55DC00C5CC61 /* ble113-ota */ = {
 			isa = PBXGroup;
 			children = (
+				19542A261D0F890000C5CC61 /* Resources */,
 				19542A1F1D0F752300C5CC61 /* Peripherals */,
 				19542A1E1D0F746D00C5CC61 /* Controllers */,
 				19542A0C1D0F55DC00C5CC61 /* AppDelegate.swift */,
@@ -94,6 +99,15 @@
 				19542A221D0F786400C5CC61 /* BluegigaPeripheral.swift */,
 			);
 			name = Peripherals;
+			sourceTree = "<group>";
+		};
+		19542A261D0F890000C5CC61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19542A271D0F890000C5CC61 /* 0.1.0.ota */,
+				19542A281D0F890000C5CC61 /* 0.1.1.ota */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		70C98E8507FEEFAF9F5050AC /* Pods */ = {
@@ -174,8 +188,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19542A291D0F890000C5CC61 /* 0.1.0.ota in Resources */,
 				19542A171D0F55DC00C5CC61 /* LaunchScreen.storyboard in Resources */,
 				19542A141D0F55DC00C5CC61 /* Assets.xcassets in Resources */,
+				19542A2A1D0F890000C5CC61 /* 0.1.1.ota in Resources */,
 				19542A121D0F55DC00C5CC61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
