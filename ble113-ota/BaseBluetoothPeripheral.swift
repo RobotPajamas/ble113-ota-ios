@@ -9,12 +9,13 @@
 import LGBluetooth
 
 class BaseBluetoothPeripheral {
-    
+
     // Standard BLE services
+
     enum StandardServices {
         static let deviceInformation: String = "180A";
     }
-    
+
     enum StandardCharacteristics {
         static let manufacturerModel: String = "2A24";
         static let serialNumber: String = "2A25";
@@ -23,12 +24,12 @@ class BaseBluetoothPeripheral {
         static let softwareVersion: String = "2A28";
         static let manufacturerName: String = "2A29";
     }
-    
+
     var peripheral: LGPeripheral!
-    
+
     var name: String?
     var rssi: Int?
-    
+
     // Properties for the standard services
     var manufacturerModel: String?
     var serialNumber: String?
@@ -36,7 +37,7 @@ class BaseBluetoothPeripheral {
     var hardwareRevision: String?
     var softwareRevision: String?
     var manufacturerName: String?
-    
+
     /**
      * Constructor
      * @param peripheral LGPeripheral instance representing this device
@@ -46,14 +47,14 @@ class BaseBluetoothPeripheral {
         self.name = self.peripheral.name
         self.rssi = self.peripheral.RSSI
     }
-    
+
     /**
      * Determines if this peripheral is currently connected or not
      */
     func isConnected() -> Bool {
         return peripheral.cbPeripheral.state == .Connected
     }
-    
+
     /**
      * Opens connection with a timeout to this device
      * @param timeout Timeout after which, connection will be closed (if it was in stage isConnecting)
@@ -62,7 +63,7 @@ class BaseBluetoothPeripheral {
     func connect(withTimeout timeout: UInt, callback: (NSError!) -> Void) {
         peripheral.connectWithTimeout(timeout, completion: callback)
     }
-    
+
     /**
      * Disconnects from device
      * @param callback Will be called after disconnection success/failure
@@ -70,7 +71,7 @@ class BaseBluetoothPeripheral {
     func disconnect(callback: (NSError?) -> Void) {
         peripheral.disconnectWithCompletion(callback)
     }
-    
+
     /**
      * Reads all standard BLE information from device (manufacturer, firmware, hardware, serial number, etc...)
      * @param callback Will be called when all information is ready (or failed to gather data)
@@ -80,15 +81,15 @@ class BaseBluetoothPeripheral {
         // self.readSoftwareRevision({ <-- not implemented in firmawre
         self.readManufacturerModel({
 //            self.readSerialNumber({
-                self.readFirmwareRevision({
-                    self.readHardwareRevision({
-                        self.readManufacturerName(callback)
-                    })
+            self.readFirmwareRevision({
+                self.readHardwareRevision({
+                    self.readManufacturerName(callback)
                 })
+            })
 //            })
         })
     }
-    
+
     /**
      * Read in the manufacturer name
      * @param callback Will be called when the call returns with success or error
@@ -99,10 +100,10 @@ class BaseBluetoothPeripheral {
             self.manufacturerName = String(data: data, encoding: NSUTF8StringEncoding)
             callback?()
         }
-        
+
         LGUtils.readDataFromCharactUUID(StandardCharacteristics.manufacturerName, serviceUUID: StandardServices.deviceInformation, peripheral: peripheral, completion: cb)
     }
-    
+
     /**
      * Read in the manufacturer model
      * @param callback Will be called when the call returns with success or error
@@ -113,10 +114,10 @@ class BaseBluetoothPeripheral {
             self.manufacturerModel = String(data: data, encoding: NSUTF8StringEncoding)
             callback?()
         }
-        
+
         LGUtils.readDataFromCharactUUID(StandardCharacteristics.manufacturerModel, serviceUUID: StandardServices.deviceInformation, peripheral: peripheral, completion: cb)
     }
-    
+
     /**
      * Read in the hardware revision
      * @param callback Will be called when the call returns with success or error
@@ -127,10 +128,10 @@ class BaseBluetoothPeripheral {
             self.hardwareRevision = String(data: data, encoding: NSUTF8StringEncoding)
             callback?()
         }
-        
+
         LGUtils.readDataFromCharactUUID(StandardCharacteristics.hardwareVersion, serviceUUID: StandardServices.deviceInformation, peripheral: peripheral, completion: cb)
     }
-    
+
     /**
      * Read in the firmware version
      * @param callback Will be called when the call returns with success or error
@@ -141,10 +142,10 @@ class BaseBluetoothPeripheral {
             self.firmwareRevision = String(data: data, encoding: NSUTF8StringEncoding)
             callback?()
         }
-        
+
         LGUtils.readDataFromCharactUUID(StandardCharacteristics.firmwareVersion, serviceUUID: StandardServices.deviceInformation, peripheral: peripheral, completion: cb)
     }
-    
+
     /**
      * Read in the software version
      * @param callback Will be called when the call returns with success or error
@@ -155,10 +156,10 @@ class BaseBluetoothPeripheral {
             self.softwareRevision = String(data: data, encoding: NSUTF8StringEncoding)
             callback?()
         }
-        
+
         LGUtils.readDataFromCharactUUID(StandardCharacteristics.softwareVersion, serviceUUID: StandardServices.deviceInformation, peripheral: peripheral, completion: cb)
     }
-    
+
     /**
      * Read in the serial number
      * @param callback Will be called when the call returns with success or error
@@ -169,7 +170,7 @@ class BaseBluetoothPeripheral {
             self.serialNumber = String(data: data, encoding: NSUTF8StringEncoding)
             callback?()
         }
-        
+
         LGUtils.readDataFromCharactUUID(StandardCharacteristics.serialNumber, serviceUUID: StandardServices.deviceInformation, peripheral: peripheral, completion: cb)
     }
 }

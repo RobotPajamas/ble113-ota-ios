@@ -9,29 +9,29 @@
 import UIKit
 
 class FirmwareUpdateViewController: UIViewController {
-    
+
     @IBOutlet weak var firmwareVersionLabel: UILabel!
     @IBOutlet weak var updateButton010: UIButton!
     @IBOutlet weak var updateButton011: UIButton!
-    
+
     @IBAction func updateToOldFirmare(sender: UIButton) {
         if let firmwarePath = NSBundle.mainBundle().pathForResource("0.1.0", ofType: ".ota", inDirectory: ".") {
             print(firmwarePath)
-            let fileData = NSData(contentsOfFile:firmwarePath)
+            let fileData = NSData(contentsOfFile: firmwarePath)
             let totalNumberOfPackets = fileData!.length / 16
             print(totalNumberOfPackets)
             self.peripheral?.updateFirmware(fileData!) {
-                
+
                 print("Update to 0.1.0 Completed!")
             }
         }
-        
+
     }
-    
+
     @IBAction func updateToNewFirmware(sender: UIButton) {
         if let firmwarePath = NSBundle.mainBundle().pathForResource("0.1.1", ofType: ".ota", inDirectory: ".") {
             print(firmwarePath)
-            let fileData = NSData(contentsOfFile:firmwarePath)
+            let fileData = NSData(contentsOfFile: firmwarePath)
             let totalNumberOfPackets = fileData!.length / 16
             print(totalNumberOfPackets)
             self.peripheral?.updateFirmware(fileData!) {
@@ -39,18 +39,18 @@ class FirmwareUpdateViewController: UIViewController {
             }
         }
     }
-    
+
     // Just sticking this here, so I can set it from the scan viewcontroller
     var peripheral: BluegigaPeripheral?
-    
+
     override func viewDidLoad() {
         updateButton010.hidden = true
         updateButton011.hidden = true
     }
-    
+
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         // Note: Not a lot of safety around connection checks
         // This is a proof of concept, not a rock-solid update controller
         if peripheral?.isConnected() == true {
@@ -72,5 +72,5 @@ class FirmwareUpdateViewController: UIViewController {
             }
         }
     }
-    
+
 }
