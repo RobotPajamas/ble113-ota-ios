@@ -1,0 +1,13 @@
+PODS:
+  - LGBluetooth (1.1.5)
+  - MBProgressHUD (0.9.2)
+
+DEPENDENCIES:
+  - LGBluetooth (~> 1.1.5)
+  - MBProgressHUD (~> 0.9.2)
+
+SPEC CHECKSUMS:
+  LGBluetooth: 8407d2de27bcbd4a9e11243290b928293ffa8881
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+
+COCOAPODS: 0.39.0
