@@ -16,26 +16,18 @@ class FirmwareUpdateViewController: UIViewController {
 
     @IBAction func updateToOldFirmare(sender: UIButton) {
         if let firmwarePath = NSBundle.mainBundle().pathForResource("0.1.0", ofType: ".ota", inDirectory: ".") {
-            print(firmwarePath)
             let fileData = NSData(contentsOfFile: firmwarePath)
-            let totalNumberOfPackets = fileData!.length / 16
-            print(totalNumberOfPackets)
             self.peripheral?.updateFirmware(fileData!) {
-
                 print("Update to 0.1.0 Completed!")
             }
         }
-
     }
 
     @IBAction func updateToNewFirmware(sender: UIButton) {
         if let firmwarePath = NSBundle.mainBundle().pathForResource("0.1.1", ofType: ".ota", inDirectory: ".") {
-            print(firmwarePath)
             let fileData = NSData(contentsOfFile: firmwarePath)
-            let totalNumberOfPackets = fileData!.length / 16
-            print(totalNumberOfPackets)
             self.peripheral?.updateFirmware(fileData!) {
-                print("Update to 0.1.0 Completed!")
+                print("Update to 0.1.1 Completed!")
             }
         }
     }

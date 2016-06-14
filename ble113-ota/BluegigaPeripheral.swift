@@ -23,7 +23,6 @@ class BluegigaPeripheral: BaseBluetoothPeripheral {
     enum BluegigaCharacteristics {
 //        static let control: String = "f7bf3564-fb6d-4e53-88a4-5e37e0326063";
 //        static let dataNoAck: String = "984227f3-34fc-4045-a5d0-2c581f81a153";
-
         static let controlNoAck: String = "01737572-6573-686a-6f73-68692e636f6d";
         static let data: String = "00737572-6573-686a-6f73-68692e636f6d";
     }
@@ -42,29 +41,14 @@ class BluegigaPeripheral: BaseBluetoothPeripheral {
     }
 
     private func uploadNextPacket(completion: Void -> Void) {
-//        let callback: LGCharacteristicWriteCallback = {
-//             error in  // This error is just getting ignored here
-//            if self.currentPacket == self.totalNumberOfPackets {
-//                // Send reset or something
-//                return
-//            } else {
-//                // Send next packet
-//                
-//            
-//                LGUtils.writeData(nextPacket, charactUUID: BluegigaCharacteristics.data, serviceUUID: BluegigaServices.ota, peripheral: self.peripheral, completion: {
-//                    error in
-//                    self.uploadNextPacket()
-//                })
-//            }
-//        }
-
         if self.currentPacket == self.totalNumberOfPackets {
-            // Send reset or something
+            // Send reset command
             var resetCommand: UInt8 = 3
             let resetData = NSData(bytes: &resetCommand, length: 1)
             LGUtils.writeData(resetData, charactUUID: BluegigaCharacteristics.controlNoAck, serviceUUID: BluegigaServices.ota, peripheral: self.peripheral, completion: nil)
             completion()
         } else {
+            // Send next packet
             print(self.currentPacket)
             let nextPacket = self.fileData.subdataWithRange(NSRange(location: self.currentPacket * BluegigaPeripheral.packetSize, length: BluegigaPeripheral.packetSize))
             self.currentPacket += 1

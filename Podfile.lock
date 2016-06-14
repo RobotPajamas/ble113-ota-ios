@@ -1,19 +1,13 @@
 PODS:
-  - Eureka (1.5.0)
   - LGBluetooth (1.1.5)
   - MBProgressHUD (0.9.2)
-  - XCGLogger (3.3)
 
 DEPENDENCIES:
-  - Eureka (~> 1.5.0)
   - LGBluetooth (~> 1.1.5)
   - MBProgressHUD (~> 0.9.2)
-  - XCGLogger (~> 3.3)
 
 SPEC CHECKSUMS:
-  Eureka: 2fb37bb50569c62ee3284689d5b7aca694b040e0
   LGBluetooth: 8407d2de27bcbd4a9e11243290b928293ffa8881
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  XCGLogger: d6e196e78940ff6daab17d6917107876f973fa31
 
 COCOAPODS: 0.39.0

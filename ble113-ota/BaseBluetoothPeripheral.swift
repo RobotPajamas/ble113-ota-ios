@@ -10,8 +10,6 @@ import LGBluetooth
 
 class BaseBluetoothPeripheral {
 
-    // Standard BLE services
-
     enum StandardServices {
         static let deviceInformation: String = "180A";
     }
