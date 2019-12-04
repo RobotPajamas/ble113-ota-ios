@@ -1,4 +1,7 @@
 # ble113-ota-ios
+
+## This project is no longer maintained as the BLE113 is a "legacy" product for Silicon Labs
+
 Firmware and iOS code to have Over-The-Air updates to the BLE113 (or any Bluegiga Bluetooth device)
 
 Please refer to http://www.sureshjoshi.com/embedded/ble113-ota-over-the-air-programming/ for a quick summary.
